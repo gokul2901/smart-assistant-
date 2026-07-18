@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pandas
+
+chromadb
+sentence-transformers
+litellm
+python-dotenv
+pydantic
+numpy
+
+openai-whisper
+SpeechRecognition
+pyttsx3
+sounddevice
+soundfile
