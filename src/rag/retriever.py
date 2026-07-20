@@ -1,14 +1,21 @@
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-# Initialize ChromaDB client
-client = chromadb.PersistentClient(path="data/chromadb")
-collection = client.get_or_create_collection(name="products")
+_client = None
+_collection = None
+_model = None
 
-# Initialize the embedding model for the query
-model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+def get_retriever_resources():
+    global _client, _collection, _model
+    if _client is None:
+        _client = chromadb.PersistentClient(path="data/chromadb")
+        _collection = _client.get_or_create_collection(name="products")
+    if _model is None:
+        _model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+    return _collection, _model
 
 def retrieve(query):
+    collection, model = get_retriever_resources()
     # Encode query to generate embedding
     query_embedding = model.encode(query).tolist()
 

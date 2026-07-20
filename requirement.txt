@@ -4,7 +4,7 @@ pandas
 
 chromadb
 sentence-transformers
-litellm
+litellm==1.82.6
 python-dotenv
 pydantic
 numpy
@@ -14,3 +14,4 @@ SpeechRecognition
 pyttsx3
 sounddevice
 soundfile
+streamlit
