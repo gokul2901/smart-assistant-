@@ -14,3 +14,4 @@ SpeechRecognition
 pyttsx3
 sounddevice
 soundfile
+streamlit
