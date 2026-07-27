@@ -1,67 +1,74 @@
-.env
-
-
-─── Environment & Secrets ────────────────────────────────────────────────────
+# Environment & Secrets
 .env
 .env.*
+!.env.example
 *.pem
 *.key
 
-# Python
+# Python / Byte-compiled / cache
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.pyc
-*.egg
-*.egg-info/
-dist/
+*$py.class
+*.so
+.Python
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
 .eggs/
-*.whl
-*.spec
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Pytest / Coverage / Linting
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.noserc
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
 
 # Virtual Environments
 venv/
 .venv/
 env/
-.env/
+ENV/
+env.bak/
+venv.bak/
 
-# Vector Store & Database
-chroma_db/
-chromadb/
+# Data & Storage (Uploads, Exports, Backups, Databases)
+data/raw
+data/uploads
+data/exports
+data/backups
 data/chromadb/
+*.sqlite
 *.sqlite3
 *.db
 
-─── ML Model Cache ───────────────────────────────────────────────────────────
-.cache/
-*.bin
-*.pt
-*.ckpt
-*.safetensors
-
-─── Uploads & Generated Files ───────────────────────────────────────────────
-uploads/
-extracted_text.txt
-chunks/
-
-─── Logs ─────────────────────────────────────────────────────────────────────
-*.log
+# Logs
 logs/
+*.log
 
-─── IDE ──────────────────────────────────────────────────────────────────────
+# IDE & Editors
 .vscode/
 .idea/
-*.suo
-*.user
-
-─── OS ───────────────────────────────────────────────────────────────────────
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
-desktop.ini
-
-─── pytest / testing ─────────────────────────────────────────────────────────
-.pytest_cache/
-.coverage
-htmlcov/

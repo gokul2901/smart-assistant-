@@ -1,3 +1,10 @@
+motor
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt
+loguru
+httpx
+python-multipart
 fastapi
 uvicorn
 pandas
