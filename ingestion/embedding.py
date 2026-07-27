@@ -1,20 +1,25 @@
-from sentence_transformers import SentenceTransformer
-from ingestion.create_document import documents
-
-model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-
-embeddings = model.encode(documents)
-
-if __name__ == "__main__":
-    print(embeddings.shape)
+from src.embeddings.embedding_factory import EmbeddingFactory
 
 
 
+embedding_model = EmbeddingFactory.get_embedding_model(
+    "gemini"
+)
 
-#   Documents
-#      ↓
-# BGE Embedding Model
-#      ↓
-# Vectors
-#      ↓
-# Ready for ChromaDB Storage
+
+product_text = """
+Product ID: 101
+Name: Aashirvaad Atta
+Category: Grocery
+Price: 280
+Stock: 50
+Location: Block A Rack 3
+"""
+
+
+vector = embedding_model.generate_embedding(
+    product_text
+)
+
+
+print(len(vector))

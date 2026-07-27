@@ -1,0 +1,33 @@
+[project]
+name = "enhanced-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "bcrypt>=5.0.0",
+    "chromadb>=1.5.9",
+    "fastapi>=0.139.2",
+    "google-generativeai>=0.8.6",
+    "httpx>=0.28.1",
+    "kokoro-onnx>=0.5.0",
+    "langdetect>=1.0.9",
+    "litellm==1.18",
+    "loguru>=0.7.3",
+    "motor>=3.7.1",
+    "numpy>=2.5.1",
+    "pandas>=3.0.5",
+    "passlib[bcrypt]>=1.7.4",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.2",
+    "python-jose[cryptography]>=3.5.0",
+    "python-multipart>=0.0.32",
+    "pyttsx3>=2.99",
+    "sentence-transformers>=5.6.1",
+    "setuptools>=83.0.0",
+    "sounddevice>=0.5.5",
+    "soundfile>=0.14.0",
+    "speechrecognition>=3.17.0",
+    "streamlit>=1.60.0",
+    "uvicorn>=0.51.0",
+]
