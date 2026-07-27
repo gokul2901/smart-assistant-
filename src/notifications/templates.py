@@ -17,7 +17,7 @@ Hello {customer_name},
 Your order has been confirmed.
 
 Order ID: {order_id}
-Total Amount: ₹{amount}
+Total Amount: RS {amount}
 
 Thank you for shopping with Gokul Departmental Store.
 

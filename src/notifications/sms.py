@@ -1,4 +1,4 @@
-from notifications.templates import NotificationTemplates
+from src.notifications.templates import NotificationTemplates
 
 
 
